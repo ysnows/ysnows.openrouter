@@ -1,4 +1,4 @@
-name: OpenAI
+name: OpenRouter
 version: 0.0.5
 author: ysnows
 on: {}
@@ -13,7 +13,7 @@ steps:
       messages: []
 extensionId: ysnows.openrouter
 logo: ns:translate
-description: Chat GPT - OpenAi
+description: OpenRouter
 async: false
 homePage: https://github.com/ysnows/ysnows.openrouter
 appCast: https://raw.githubusercontent.com/ysnows/ysnows.openrouter/main/appcast.json
@@ -28,23 +28,33 @@ options:
     defaultValue: ''
     menuValues: []
     desc: ''
-    placeholderText: Openai apikey
+    placeholderText: OpenRouter apikey
     textWidth: 3.6e+2
   - identifier: model
     type: menu
     title: Model
-    defaultValue: gpt-3.5-turbo
+    defaultValue: google/palm-2-chat-bison
     menuValues:
-    - title: gpt-3.5-turbo
-      value: gpt-3.5-turbo
-    - title: gpt-3.5-turbo-0613
-      value: gpt-3.5-turbo-0613
-    - title: gpt-3.5-turbo-16k
-      value: gpt-3.5-turbo-16k
-    - title: gpt-4
-      value: gpt-4
-    - title: gpt-4-32k
-      value: gpt-4-32k
+    - title: openai/gpt-3.5-turbo
+      value: openai/gpt-3.5-turbo
+    - title: openai/gpt-3.5-turbo-16k
+      value: openai/gpt-3.5-turbo-16k
+    - title: openai/gpt-4
+      value: openai/gpt-4
+    - title: openai/gpt-4-32k
+      value: openai/gpt-4-32k
+    - title: anthropic/claude-2
+      value: anthropic/claude-2
+    - title: anthropic/claude-instant-v1
+      value: anthropic/claude-instant-v1
+    - title: meta-llama/llama-2-13b-chat
+      value: meta-llama/llama-2-13b-chat
+    - title: meta-llama/llama-2-70b-chat
+      value: meta-llama/llama-2-70b-chat
+    - title: google/palm-2-chat-bison(free)
+      value: google/palm-2-chat-bison
+    - title: google/palm-2-codechat-bison(free)
+      value: google/palm-2-codechat-bison
     desc: "\u5207\u6362zh_CN\u8BED\u97F3\u89D2\u8272"
     placeholderText: ''
     textWidth: 2e+2
@@ -69,7 +79,7 @@ options:
   - identifier: basePath
     type: text
     title: basePath
-    defaultValue: https://api.openai.com
+    defaultValue: https://openrouter.ai/api
     menuValues: []
     desc: ''
     placeholderText: customised request url

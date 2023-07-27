@@ -6,15 +6,22 @@ const {ChatOpenAI} = require("enconvo/llm/openai");
 
 (async () => {
     const {context, options} = req.body();
-    console.log(`process begin...${JSON.stringify(context)}`)
+    console.log(`process begin...${JSON.stringify(options)} `)
 
     const chat = new ChatOpenAI({
         streaming: true,
+        modelName: options.model,
         temperature: +options.temperature,
         openAIApiKey: options.apiKey,
         verbose: true
     }, {
-        basePath: `${options.basePath}/v1/`
+        basePath: `${options.basePath}/v1`,
+        baseOptions: {
+            headers: {
+                "Http-Referer": "https://enconvo.com",
+                "X-Title": "enconvo"
+            }
+        }
     });
 
     const messages = context.messages.map((item) => {
