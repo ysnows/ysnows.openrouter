@@ -1,0 +1,17 @@
+{
+  "identifier": "ysnows.openrouter",
+  "versions": [
+    {
+      "version": "0.0.5",
+      "desc": "添加新的模型",
+      "url": "https://github.com/ysnows/ysnows.openrouter/releases/download/v0.0.5/ysnows.openrouter.enconvoplugin",
+      "minAppVersion": "1.2.1"
+    },
+    {
+      "version": "0.0.4",
+      "desc": "feat: 1. 0.0.4",
+      "url": "https://github.com/ysnows/ysnows.openrouter/releases/download/v0.0.4/ysnows.openrouter.enconvoplugin",
+      "minAppVersion": "1.2.1"
+    }
+  ]
+}

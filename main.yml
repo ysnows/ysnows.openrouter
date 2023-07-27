@@ -1,0 +1,77 @@
+name: OpenAI
+version: 0.0.5
+author: ysnows
+on: {}
+steps:
+- name: ''
+  uses: javascript
+  env:
+    JSFilePath:
+      type: file-path
+      value: index.js
+      sort: 0
+      messages: []
+extensionId: ysnows.openrouter
+logo: ns:translate
+description: Chat GPT - OpenAi
+async: false
+homePage: https://github.com/ysnows/ysnows.openrouter
+appCast: https://raw.githubusercontent.com/ysnows/ysnows.openrouter/main/appcast.json
+minAppVersion: 1.2.1
+flowType: llmEngine
+options:
+- title: Model Settings
+  items:
+  - identifier: apiKey
+    type: secure
+    title: ApiKey
+    defaultValue: ''
+    menuValues: []
+    desc: ''
+    placeholderText: Openai apikey
+    textWidth: 3.6e+2
+  - identifier: model
+    type: menu
+    title: Model
+    defaultValue: gpt-3.5-turbo
+    menuValues:
+    - title: gpt-3.5-turbo
+      value: gpt-3.5-turbo
+    - title: gpt-3.5-turbo-0613
+      value: gpt-3.5-turbo-0613
+    - title: gpt-3.5-turbo-16k
+      value: gpt-3.5-turbo-16k
+    - title: gpt-4
+      value: gpt-4
+    - title: gpt-4-32k
+      value: gpt-4-32k
+    desc: "\u5207\u6362zh_CN\u8BED\u97F3\u89D2\u8272"
+    placeholderText: ''
+    textWidth: 2e+2
+  - identifier: temperature
+    type: menu
+    title: Temperature
+    defaultValue: '1.0'
+    menuValues:
+      - title: 'none'
+        value: '0.0'
+      - title: 'low'
+        value: '0.5'
+      - title: 'medium'
+        value: '1.0'
+      - title: 'high'
+        value: '1.5'
+      - title: 'maximum'
+        value: '2.0'
+    desc: "\u5207\u6362zh_CN\u8BED\u97F3\u89D2\u8272"
+    placeholderText: ''
+    textWidth: 2e+2
+  - identifier: basePath
+    type: text
+    title: basePath
+    defaultValue: https://api.openai.com
+    menuValues: []
+    desc: ''
+    placeholderText: customised request url
+    textWidth: 3.6e+2
+  desc: "\u9009\u62E9\u5BF9\u5E94\u8BED\u8A00\u7684\u8BED\u97F3"
